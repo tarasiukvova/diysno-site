@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diysno Brewery — крафтова броварня з Рівного</title>
+<meta name="description" content="Diysno Brewery — крафтова броварня з Рівного. Лагер, пшеничне, IPA, стаути й томатне пиво. Кеги 30 л і пляшки для барів, пабів і магазинів по всій Україні.">
+<link rel="canonical" href="https://diysno.com.ua/">
+<meta name="theme-color" content="#142a22">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Diysno Brewery">
+<meta property="og:title" content="Diysno Brewery — крафтова броварня з Рівного">
+<meta property="og:description" content="Крафтове пиво в кегах і пляшках для барів, пабів і магазинів по всій Україні.">
+<meta property="og:url" content="https://diysno.com.ua/">
+<meta property="og:image" content="https://diysno.com.ua/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@600;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Brewery",
+  "name": "Diysno Brewery",
+  "url": "https://diysno.com.ua/",
+  "logo": "https://diysno.com.ua/img/logo.png",
+  "image": "https://diysno.com.ua/img/og.jpg",
+  "description": "Крафтова броварня з Рівного.",
+  "telephone": "+380930568263",
+  "address": { "@type": "PostalAddress", "addressLocality": "Рівне", "addressCountry": "UA" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/diysno_brewery/", "https://untappd.com/DiysnoBrewery"]
+}
+</script>
+<style>
+:root {
+  --paper: #faf8f2;
+  --paper-2: #f2ede2;
+  --paper-3: #e7dfd0;
+  --green: #142a22;
+  --green-2: #1c3a2f;
+  --green-3: #2a4d40;
+  --copper: #b5792c;
+  --copper-ink: #8a571a;
+  --copper-light: #d9a55a;
+  --text: #1f2a25;
+  --muted: #5d6762;
+  --line: #ddd4c4;
+  --f-display: "Unbounded", "Arial Black", "Segoe UI", sans-serif;
+  --f-body: "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--text); font: 400 16px/1.6 var(--f-body); overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; border-radius: 4px; }
+.shell { max-width: 1120px; margin-inline: auto; padding-inline: 24px; }
+@media (max-width: 480px) { .shell { padding-inline: 18px; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.top { position: relative; z-index: 3; }
+.top-in { display: flex; align-items: center; justify-content: flex-end; gap: 16px; padding-block: 18px; }
+.top-nav { display: flex; gap: 6px 22px; flex-wrap: wrap; justify-content: flex-end; font-weight: 600; font-size: 15px; }
+.top-nav a { text-decoration: none; padding-block: 4px; border-bottom: 2px solid transparent; }
+.top-nav a:hover { border-bottom-color: var(--copper); }
+@media (max-width: 560px) { .top { display: none; } .hero { padding-top: 28px; } }
+
+.hero { position: relative; padding-block: 40px 70px; overflow: hidden; }
+.hero::before { content: ""; position: absolute; top: -40px; right: -140px; width: 720px; height: 520px; background: url(img/stain.webp) center / contain no-repeat; opacity: .32; pointer-events: none; }
+.hero-in { position: relative; display: grid; gap: 28px; }
+.hero-logo { width: min(640px, 100%); height: auto; }
+.hero-tag { margin: 0; font: 800 clamp(26px, 4.6vw, 48px)/1.08 var(--f-display); color: var(--green); letter-spacing: -0.01em; max-width: 17ch; text-wrap: balance; }
+.hero-text { margin: 0; max-width: 58ch; font-size: clamp(16px, 1.6vw, 18px); color: var(--muted); }
+.hero-text b { color: var(--text); font-weight: 600; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 24px; border-radius: 999px; border: 2px solid var(--green); background: var(--green); color: var(--paper); font: 600 15px/1.2 var(--f-display); letter-spacing: 0.01em; text-decoration: none; cursor: pointer; transition: background-color .15s, color .15s, border-color .15s; }
+.btn:hover { background: var(--green-3); border-color: var(--green-3); }
+.btn.ghost { background: transparent; color: var(--green); }
+.btn.ghost:hover { background: var(--green); color: var(--paper); }
+.btn.copper { background: var(--copper); border-color: var(--copper); color: var(--green); }
+.btn.copper:hover { background: var(--copper-light); border-color: var(--copper-light); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+.brush { display: block; width: min(420px, 70%); height: 46px; margin: 0 auto; background: url(img/brush.webp) center / contain no-repeat; opacity: .9; }
+
+.sec { padding-block: 72px; }
+.sec-head { display: grid; gap: 10px; margin-bottom: 36px; }
+.kicker { margin: 0; color: var(--copper-ink); font: 600 12px/1.4 var(--f-body); letter-spacing: 0.18em; text-transform: uppercase; }
+.sec-title { margin: 0; font: 800 clamp(26px, 3.6vw, 40px)/1.1 var(--f-display); color: var(--green); text-wrap: balance; }
+.sec-lead { margin: 0; max-width: 60ch; color: var(--muted); }
+
+.beers { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.beer { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 24px 24px 20px; background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 1px 0 rgba(20,42,34,.04); }
+.beer-label { margin: -8px -8px 6px; border-radius: 10px; overflow: hidden; aspect-ratio: 733 / 388; background: var(--green); }
+.beer-label img { width: 100%; height: 100%; object-fit: cover; }
+.beer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.beer-name { margin: 0; font: 800 21px/1.15 var(--f-display); color: var(--green); text-transform: uppercase; letter-spacing: 0.005em; }
+.tag-new { flex: none; padding: 4px 10px; border-radius: 999px; background: var(--copper); color: #fff; font: 600 11px/1.3 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; }
+.beer-style { margin: 0; color: var(--copper-ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.beer-desc { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.beer-meta { margin: auto 0 0; padding-top: 14px; border-top: 1px dashed var(--line); display: grid; gap: 6px; font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.beer-meta > span { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
+.beer-meta b { color: var(--text); font-weight: 600; }
+.beer-meta .fmt { margin-right: auto; color: var(--green); font-weight: 600; }
+.beer-meta > .rate { gap: 4px 12px; }
+.beer-meta a { color: var(--green); font-weight: 600; text-decoration-color: var(--copper); text-underline-offset: 3px; }
+.beer-meta a:hover { color: var(--copper-ink); }
+.ut-star { color: var(--copper); }
+.all-ut { display: inline-flex; margin-top: 28px; color: var(--green); font-weight: 600; text-decoration-color: var(--copper); text-underline-offset: 4px; }
+.beers-note { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
+
+.partners { position: relative; background: var(--green); color: var(--paper); overflow: hidden; }
+.partners::after { content: ""; position: absolute; right: -180px; bottom: -160px; width: 620px; height: 460px; background: url(img/stain.webp) center / contain no-repeat; opacity: .08; pointer-events: none; }
+.partners .kicker { color: var(--copper-light); }
+.partners .sec-title { color: var(--paper); }
+.partners .sec-lead { color: #c9d2cd; }
+.points { position: relative; z-index: 1; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+.point { display: grid; gap: 10px; align-content: start; padding: 22px; border: 1px solid var(--green-3); border-radius: 16px; background: var(--green-2); }
+.point svg { width: 34px; height: 34px; color: var(--copper-light); }
+.point svg * { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.point h3 { margin: 0; font: 600 17px/1.3 var(--f-display); }
+.point p { margin: 0; color: #c9d2cd; font-size: 15px; }
+.cta { position: relative; z-index: 1; margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding: 26px 28px; border-radius: 18px; background: var(--paper); color: var(--green); }
+.cta-text { flex: 1 1 280px; margin: 0; }
+.cta-text b { display: block; font: 800 20px/1.25 var(--f-display); }
+.cta-text span { color: var(--muted); font-size: 15px; }
+
+.contacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.card { display: grid; gap: 6px; align-content: start; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.card h3 { margin: 0; color: var(--copper-ink); font: 600 12px/1.4 var(--f-body); letter-spacing: 0.16em; text-transform: uppercase; }
+.card .big { margin: 0; font: 800 clamp(17px, 1.7vw, 19px)/1.3 var(--f-display); color: var(--green); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.card .big a { text-decoration: none; }
+.card .big a:hover { color: var(--copper-ink); }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.hours { margin: 0; display: grid; gap: 4px; font-variant-numeric: tabular-nums; }
+.hours div { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 4px; border-bottom: 1px dashed var(--line); }
+.hours dt { color: var(--muted); }
+.hours dd { margin: 0; font-weight: 600; color: var(--green); }
+
+.foot { margin-top: 40px; padding-block: 36px 40px; border-top: 1px solid var(--line); background: var(--paper-2); }
+.foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 28px; }
+.foot img { width: 120px; height: auto; }
+.foot p { margin: 0; color: var(--muted); font-size: 13.5px; }
+.age { display: inline-flex; align-items: center; gap: 10px; }
+.age b { display: inline-grid; place-items: center; width: 40px; height: 40px; border: 2px solid var(--green); border-radius: 50%; color: var(--green); font: 800 13px/1 var(--f-display); flex: none; }
+
+@media (max-width: 560px) { .hero::before { top: 150px; right: -230px; width: 420px; height: 300px; opacity: .14; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="shell top-in">
+    <nav class="top-nav" aria-label="Розділи">
+      <a href="#pyvo">Пиво</a>
+      <a href="#zaklady">Для закладів</a>
+      <a href="#kontakty">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="shell hero-in">
+      <h1 class="sr">Diysno Brewery</h1>
+      <picture>
+        <source srcset="img/logo.webp" type="image/webp">
+        <img class="hero-logo" src="img/logo.png" alt="Логотип Diysno Brewery" width="1000" height="324">
+      </picture>
+      <p class="hero-tag" id="hero-h">Крафтова броварня з Рівного</p>
+      <p class="hero-text">Варимо класику — лагер, пшеничне, стаут — і пиво, якого більше ніде не знайдеш. Окрема наша тема — <b>пиво з овочами й прянощами</b>: томатне Pepperazzi, Tommy Tabasco, Mister Kimchi. Постачаємо в бари, паби й магазини по всій Україні.</p>
+      <div class="hero-btns">
+        <a class="btn" href="#pyvo">Наше пиво</a>
+        <a class="btn ghost" href="#zaklady">Для закладів</a>
+      </div>
+    </div>
+  </section>
+
+  <span class="brush" aria-hidden="true"></span>
+
+  <section class="sec" id="pyvo" aria-labelledby="pyvo-h">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="kicker">Зараз варимо</p>
+        <h2 class="sec-title" id="pyvo-h">Наше пиво</h2>
+        <p class="sec-lead">Пиво, яке є зараз: у кегах по 30 л і в пляшках 0,33 л.</p>
+      </div>
+      <div class="beers" id="beers"></div>
+      <a class="all-ut" href="https://untappd.com/DiysnoBrewery" target="_blank" rel="noopener">Усі наші пива на Untappd ↗</a>
+    </div>
+  </section>
+
+  <section class="sec partners" id="zaklady" aria-labelledby="zaklady-h">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="kicker">Для закладів</p>
+        <h2 class="sec-title" id="zaklady-h">Для барів, пабів і магазинів</h2>
+        <p class="sec-lead">Працюємо із закладами по всій Україні напряму, без посередників.</p>
+      </div>
+      <ul class="points">
+        <li class="point">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><rect x="8" y="4" width="18" height="26" rx="4"/><path d="M8 11h18M8 23h18M14 4V2h6v2"/></svg>
+          <h3>Кеги й пляшки</h3>
+          <p>Кеги по 30 л і пляшкове пиво 0,33 л.</p>
+        </li>
+        <li class="point">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 9h18v15H3zM21 14h6l4 5v5H21z"/><circle cx="9" cy="26" r="3"/><circle cx="26" cy="26" r="3"/></svg>
+          <h3>Доставка по Україні</h3>
+          <p>Відправляємо Новою поштою в будь-яке місто.</p>
+        </li>
+        <li class="point">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="4" width="24" height="26" rx="3"/><path d="M10 11h14M10 17h14M10 23h8"/></svg>
+          <h3>Своя сторінка замовлення</h3>
+          <p>Кожен партнер отримує особисту сторінку: актуальне пиво, кошик і повтор минулого замовлення.</p>
+        </li>
+        <li class="point">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M9 4h12l6 6v20H9z"/><path d="M21 4v6h6M13 18l3 3 6-6"/></svg>
+          <h3>Офіційно</h3>
+          <p>Договір і видаткові накладні від броварні.</p>
+        </li>
+      </ul>
+      <div class="cta">
+        <p class="cta-text"><b>Хочете наше пиво у своєму закладі?</b><span>Залиште заявку або подзвоніть менеджеру — розкажемо про асортимент і умови та надішлемо особисте посилання для замовлень.</span></p>
+        <a class="btn copper" href="zamovlennya/">Стати партнером</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="kontakty" aria-labelledby="kontakty-h">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="kicker">Контакти</p>
+        <h2 class="sec-title" id="kontakty-h">Звʼязатися з нами</h2>
+      </div>
+      <div class="contacts">
+        <div class="card">
+          <h3>Менеджер по закладах</h3>
+          <p class="big"><a href="tel:+380930568263">+380 93 056 82 63</a></p>
+          <p>Співпраця, асортимент, замовлення</p>
+        </div>
+        <div class="card">
+          <h3>Графік</h3>
+          <dl class="hours">
+            <div><dt>Пн–Пт</dt><dd>9:00–18:00</dd></div>
+            <div><dt>Сб</dt><dd>9:00–15:00</dd></div>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Instagram</h3>
+          <p class="big"><a href="https://www.instagram.com/diysno_brewery/" target="_blank" rel="noopener">@diysno_brewery ↗</a></p>
+        </div>
+        <div class="card">
+          <h3>Untappd</h3>
+          <p class="big"><a href="https://untappd.com/DiysnoBrewery" target="_blank" rel="noopener">Diysno Brewery ↗</a></p>
+          <p>Рейтинги й відгуки про наше пиво</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="shell foot-in">
+    <img src="img/logo.png" alt="Diysno Brewery" width="1000" height="324">
+    <p class="age"><b>18+</b>Інформація на сайті призначена для осіб, яким виповнилося 18 років.</p>
+    <p>© <span id="year">2026</span> Diysno Brewery · Рівне</p>
+  </div>
+</footer>
+
+<script type="application/json" id="catalog">
+{
+  "api": "https://script.google.com/macros/s/AKfycbxzPllKUYE0g9ia2qawOyP0WAdOInNYIl3Q_3kV2IJf__Fz6RsbnOQO8lobSfoaz__k/exec",
+  "beers": [
+    { "id": "tropic-on-tap", "unit": "keg", "name": "Tropic On Tap", "isNew": true, "style": "American IPA", "abv": 4.5, "ibu": 55,
+      "description": "Соковиті нотки тропічних фруктів поєднуються зі свіжим ароматом цитрусової цедри. У післясмаку — сухий фініш і виразна хмелева гірчинка.",
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-tropic-on-tap/7678096", "rating": null, "ratings": 0 } },
+    { "id": "easy-chill", "unit": "keg", "name": "Easy Chill", "isNew": false, "style": "Класичний лагер", "abv": 4, "ibu": 21,
+      "description": "Світло-золотистого кольору, чистий, збалансований, з легкою гіркотою та солодовим тілом.",
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-easy-chill/6073373", "rating": 3.67, "ratings": 173 } },
+    { "id": "westy-wheat", "unit": "keg", "name": "Westy Wheat", "isNew": false, "style": "American Wheat", "abv": 4.5, "ibu": 21,
+      "description": "Легкий American Wheat з яскравим ароматом квітів та цитрусів. М’яке тіло, помірна гіркота, сухий фініш та чистий освіжаючий смак, що робить його ідеальним пивом для спекотних днів.",
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-westy-wheat/7675033", "rating": null, "ratings": 1 } },
+    { "id": "bernstein", "unit": "keg", "name": "Bernstein", "isNew": true, "style": "Oktoberfest", "abv": 5, "ibu": 15,
+      "description": "Той самий настрій Oktoberfest. М’який солодовий характер, хлібні та легкі карамельні ноти, приємна гіркота й чистий сухий фініш.",
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-bernstein/6912891", "rating": 3.54, "ratings": 59 } },
+    { "id": "hefeweizen", "unit": "keg", "name": "Hefeweizen", "isNew": false, "style": "Класичне пшеничне пиво", "abv": 4.1, "ibu": 12,
+      "description": "Класичне нефільтроване, ароматне пшеничне пиво, яке має солом’яний, мутний колір та виразний бананово-гвоздичний профіль.",
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-hefeweizen/6055757", "rating": 3.70, "ratings": 173 } },
+    { "id": "pepperazzi", "unit": "keg", "name": "Pepperazzi", "isNew": false, "style": "Томатне пиво", "abv": 4.7, "ibu": 12,
+      "description": "Томатне пиво з делікатною гостротою, легкою солонуватістю та приємною кислинкою. Смак стиглих томатів, пряні спеції, гарний баланс та зігріваючий післясмак.",
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-pepperazzi-tomato/7179194", "rating": 3.89, "ratings": 37 } },
+    { "id": "lights-out", "unit": "keg", "name": "Lights Out", "isNew": true, "style": "Dry Stout", "abv": 5.5, "ibu": 25,
+      "description": "Темний стаут із виразним характером обсмаженого солоду. В ароматі — кава, какао та підсмажена хлібна скоринка. У смаку кавові й шоколадні ноти поєднуються з легкими карамельними відтінками та стриманою хмелевою гіркотою. Сухий, злегка обсмажений післясмак.",
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-lights-out/7651469", "rating": null, "ratings": 3 } },
+    { "id": "cinnamon-eyes", "unit": "bottle", "name": "Cinnamon Eyes", "isNew": false, "style": "Imperial Stout · бочка з-під віскі",
+      "description": "Imperial Stout, витриманий у бочці з-під віскі з додаванням кориці та настоянки Mamajuana. Глибоке, солодкувате, спокусливе — як очі, у які хочеться дивитись." },
+    { "id": "drunk-by-design", "unit": "bottle", "name": "Drunk by Design", "isNew": false, "style": "Imperial Stout · бочка з-під бурбону",
+      "description": "Темний, густий, зігріваючий імперський стаут, витриманий у бочці з-під бурбону. Глибокий аромат кави, ванілі, чорного шоколаду та дуба. Насичене тіло, благородний післясмак, зрілий характер." }
+  ]
+}
+</script>
+<script>
+(function () {
+  "use strict";
+  var CAT = JSON.parse(document.getElementById("catalog").textContent);
+  var LABELS = {
+    "cinnamon-eyes": "img/cinnamon-eyes",
+    "drunk-by-design": "img/drunk-by-design"
+  };
+  var nf1 = new Intl.NumberFormat("uk-UA", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  var nf2 = new Intl.NumberFormat("uk-UA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var list = document.getElementById("beers");
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function plural(n, one, few, many) {
+    var m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return one;
+    if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+    return many;
+  }
+  function isNum(v) { return typeof v === "number" && isFinite(v) && v > 0; }
+  function safeUrl(u) { return /^https:\/\/untappd\.com\//.test(String(u || "")) ? String(u) : ""; }
+
+  function card(b) {
+    var bottle = b.unit === "bottle";
+    var label = LABELS[b.id];
+    var img = label ? '<div class="beer-label"><picture><source srcset="' + label + '.webp" type="image/webp"><img src="' + label + '.jpg" alt="Етикетка ' + esc(b.name) + '" width="733" height="388" loading="lazy"></picture></div>' : "";
+    var row1 = '<span><span class="fmt">' + (bottle ? "Пляшка 0,33 л" : "Кег 30 л") + "</span>" +
+      (isNum(b.abv) ? "<span>ABV&nbsp;<b>" + nf1.format(b.abv) + "%</b></span>" : "") +
+      (isNum(b.ibu) ? "<span>IBU&nbsp;<b>" + esc(b.ibu) + "</b></span>" : "") + "</span>";
+    var meta = [row1];
+    var ut = b.ut || null, url = ut ? safeUrl(ut.url) : "";
+    if (url) {
+      var r = isNum(ut.rating) && ut.ratings >= 5
+        ? '<span><span class="ut-star" aria-hidden="true">★</span>&nbsp;<b>' + nf2.format(ut.rating) + "</b>&nbsp;· " + ut.ratings + "&nbsp;" + plural(ut.ratings, "оцінка", "оцінки", "оцінок") + "</span>"
+        : "";
+      meta.push('<span class="rate">' + r + '<a href="' + esc(url) + '" target="_blank" rel="noopener">Untappd ↗</a></span>');
+    }
+    return '<article class="beer">' + img +
+      '<div class="beer-top"><h3 class="beer-name">' + esc(b.name) + "</h3>" + (b.isNew ? '<span class="tag-new">Новинка</span>' : "") + "</div>" +
+      (b.style ? '<p class="beer-style">' + esc(b.style) + "</p>" : "") +
+      (b.description ? '<p class="beer-desc">' + esc(b.description) + "</p>" : "") +
+      '<div class="beer-meta">' + meta.join("") + "</div>" +
+      "</article>";
+  }
+  function render(beers) {
+    var kegs = beers.filter(function (b) { return b.unit !== "bottle"; });
+    var bottles = beers.filter(function (b) { return b.unit === "bottle"; });
+    list.innerHTML = kegs.concat(bottles).map(card).join("");
+  }
+  function clean(b) {
+    return { id: String(b.id || ""), unit: b.unit === "bottle" ? "bottle" : "keg", name: String(b.name || ""), isNew: !!b.isNew,
+      style: String(b.style || ""), description: String(b.description || ""), abv: Number(b.abv), ibu: Number(b.ibu),
+      ut: b.ut ? { url: b.ut.url, rating: Number(b.ut.rating), ratings: Number(b.ut.ratings) || 0 } : null };
+  }
+
+  render(CAT.beers);
+
+  if (CAT.api && window.fetch) {
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 12000);
+    fetch(CAT.api, ctrl ? { signal: ctrl.signal } : {})
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        clearTimeout(timer);
+        if (d && d.ok && Array.isArray(d.beers) && d.beers.length) render(d.beers.map(clean).filter(function (b) { return b.name; }));
+      })
+      .catch(function () { clearTimeout(timer); });
+  }
+})();
+</script>
+</body>
+</html>

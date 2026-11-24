@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="uk" class="nojs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<script>document.documentElement.className = "js";</script>
+<title>Замовлення · Diysno Brewery</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../img/icon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@600;800&display=swap">
+<style>
+:root {
+  --ink: #142a22;
+  --ink-2: #1c3a2f;
+  --ink-3: #25483b;
+  --line: #36594b;
+  --paper: #faf8f2;
+  --paper-2: #d6ddd8;
+  --muted: #a3b2aa;
+  --mustard: #d9a55a;
+  --mustard-2: #c4903f;
+  --red: #e23a30;
+  --warn: #ff9b8f;
+  --ok: #9fd39a;
+  --tg-bg: #17212b;
+  --tg-bubble: #182533;
+  --tg-btn: #22303f;
+  --tg-text: #e9eef3;
+  --tg-accent: #6ab3f3;
+  --f-display: "Unbounded", "Arial Black", "Segoe UI", sans-serif;
+  --f-body: "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--ink); color: var(--paper); font: 400 15px/1.55 var(--f-body); }
+body.has-dock { padding-bottom: 76px; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--mustard); outline-offset: 2px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.shell { max-width: 1160px; margin-inline: auto; padding-inline: 20px; }
+@media (max-width: 480px) { .shell { padding-inline: 16px; } }
+
+.band {
+  background: var(--mustard);
+  color: var(--ink);
+  padding-block: 26px 46px;
+  clip-path: polygon(0 0, 100% 0, 100.00% calc(100% - 8px), 98.21% calc(100% - 15px), 96.43% calc(100% - 6px), 94.64% calc(100% - 18px), 92.86% calc(100% - 2px), 91.07% calc(100% - 4px), 89.29% calc(100% - 4px), 87.50% calc(100% - 15px), 85.71% calc(100% - 2px), 83.93% calc(100% - 9px), 82.14% calc(100% - 2px), 80.36% calc(100% - 4px), 78.57% calc(100% - 18px), 76.79% calc(100% - 18px), 75.00% calc(100% - 4px), 73.21% calc(100% - 9px), 71.43% calc(100% - 4px), 69.64% calc(100% - 18px), 67.86% calc(100% - 2px), 66.07% calc(100% - 4px), 64.29% calc(100% - 9px), 62.50% calc(100% - 2px), 60.71% calc(100% - 18px), 58.93% calc(100% - 2px), 57.14% calc(100% - 9px), 55.36% calc(100% - 2px), 53.57% calc(100% - 6px), 51.79% calc(100% - 12px), 50.00% calc(100% - 18px), 48.21% calc(100% - 6px), 46.43% calc(100% - 4px), 44.64% calc(100% - 12px), 42.86% calc(100% - 6px), 41.07% calc(100% - 4px), 39.29% calc(100% - 9px), 37.50% calc(100% - 15px), 35.71% calc(100% - 4px), 33.93% calc(100% - 4px), 32.14% calc(100% - 2px), 30.36% calc(100% - 9px), 28.57% calc(100% - 22px), 26.79% calc(100% - 18px), 25.00% calc(100% - 15px), 23.21% calc(100% - 22px), 21.43% calc(100% - 22px), 19.64% calc(100% - 15px), 17.86% calc(100% - 12px), 16.07% calc(100% - 9px), 14.29% calc(100% - 6px), 12.50% calc(100% - 9px), 10.71% calc(100% - 4px), 8.93% calc(100% - 12px), 7.14% calc(100% - 22px), 5.36% calc(100% - 15px), 3.57% calc(100% - 22px), 1.79% calc(100% - 12px), 0.00% calc(100% - 8px));
+}
+.band-in { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px 32px; }
+.brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.wordmark { margin: 0; font: 800 clamp(30px, 7vw, 62px)/0.9 var(--f-display); letter-spacing: -0.01em; text-transform: uppercase; }
+.wordmark span { display: block; }
+.wordmark .home { color: inherit; text-decoration: none; }
+.hop { width: clamp(40px, 6vw, 58px); height: auto; flex: none; }
+.hop path { fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.band-meta { display: grid; gap: 4px; justify-items: end; text-align: right; }
+.pill { display: inline-block; border: 1.5px solid var(--ink); border-radius: 999px; padding: 2px 10px; font: 600 11px/1.6 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; }
+.band-title { margin: 6px 0 0; font: 600 clamp(16px, 2vw, 19px)/1.2 var(--f-display); }
+.band-sub { margin: 0; font-size: 14px; font-weight: 500; }
+@media (max-width: 560px) { .band-meta { justify-items: start; text-align: left; } }
+
+.spray {
+  height: 26px;
+  margin-top: -16px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, var(--mustard) 0 1.3px, transparent 1.8px) 3px 2px / 23px 9px,
+    radial-gradient(circle, var(--mustard) 0 1px, transparent 1.5px) 11px 5px / 37px 13px,
+    radial-gradient(circle, var(--mustard) 0 1.7px, transparent 2.2px) 17px 0 / 53px 11px,
+    radial-gradient(circle, var(--mustard) 0 0.9px, transparent 1.4px) 29px 8px / 19px 17px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+  opacity: 0.85;
+}
+.spray-up { margin-top: 0; margin-bottom: -16px; -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 100%); mask-image: linear-gradient(to top, #000 0%, transparent 100%); }
+
+.myorders { display: grid; gap: 10px; }
+.my { display: grid; gap: 8px; padding: 12px; border: 1.5px solid var(--mustard); border-radius: 10px; background: var(--ink-3); }
+.my h3 { margin: 0; font: 700 14px/1.3 var(--f-display); }
+.my p { margin: 0; color: var(--paper-2); font-size: 13.5px; line-height: 1.45; }
+.my-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.my-btns .btn { padding: 8px 14px; font-size: 14px; }
+.my-btns .btn.danger { border-color: #e0685a; color: #f0a79d; }
+.my-btns .btn.danger.sure { background: #e0685a; color: var(--ink); }
+.editing { margin: 0; padding: 10px 12px; border-radius: 8px; background: var(--mustard); color: var(--ink); font-size: 14px; font-weight: 600; }
+.editing button { margin-left: 8px; border: 0; background: none; color: var(--ink); text-decoration: underline; font: inherit; cursor: pointer; }
+.promo { margin: 14px 0 4px; padding: 12px 16px; border-radius: 10px; background: var(--mustard); color: var(--ink); display: grid; gap: 4px; font-size: 15px; line-height: 1.45; }
+.promo b { font-weight: 800; }
+.promo p { margin: 0; }
+.steps { list-style: none; margin: 22px 0 6px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; color: var(--paper-2); font-size: 14px; }
+.steps li { display: flex; align-items: center; gap: 10px; }
+.steps b { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--ink-3); color: var(--mustard); font: 600 12px/1 var(--f-display); flex: none; }
+
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 36px; align-items: start; margin-top: 14px; }
+@media (max-width: 900px) { .layout { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+
+.list-head, .beer { display: grid; grid-template-columns: minmax(0, 1fr) 112px 104px; column-gap: 22px; }
+.list-head { padding-block: 10px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+.list-head span:last-child { text-align: right; }
+.beer { row-gap: 16px; padding-block: 26px; border-bottom: 1px solid var(--line); }
+.beer-main { min-width: 0; }
+.name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.burst { width: 50px; height: 50px; flex: none; margin-block: -8px; }
+.burst polygon { fill: var(--red); }
+.burst text { fill: var(--paper); font: 800 10px var(--f-display); }
+.beer-name { margin: 0; font: 800 clamp(18px, 2.3vw, 23px)/1.15 var(--f-display); text-transform: uppercase; letter-spacing: 0.005em; text-wrap: balance; }
+.beer-style { margin: 8px 0 0; color: var(--mustard); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.beer-desc { margin: 8px 0 0; color: var(--paper-2); max-width: 62ch; }
+.ut { margin: 12px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; color: var(--muted); font-size: 13px; }
+.ut a { color: var(--paper); font-weight: 600; text-decoration: underline; text-decoration-color: var(--mustard); text-underline-offset: 3px; }
+.ut a:hover { color: var(--mustard); }
+.ut-none { font-style: italic; }
+.caps { position: relative; width: 70px; height: 12px; background: radial-gradient(circle at 6px 6px, var(--line) 0 4.6px, transparent 5.2px) 0 0 / 14px 12px repeat-x; }
+.caps::before { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w, 0%); background: radial-gradient(circle at 6px 6px, var(--mustard) 0 4.6px, transparent 5.2px) 0 0 / 14px 12px repeat-x; }
+.rate { color: var(--paper); font-variant-numeric: tabular-nums; }
+
+.specs { margin: 0; display: grid; gap: 6px; align-content: start; font-variant-numeric: tabular-nums; }
+.specs div { display: flex; justify-content: space-between; gap: 8px; padding-bottom: 4px; border-bottom: 1px dashed var(--line); }
+.specs dt { color: var(--muted); font-size: 12px; letter-spacing: 0.08em; }
+.specs dd { margin: 0; font-weight: 600; }
+.price { text-align: right; }
+.price .num { display: block; color: var(--mustard); font: 800 34px/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.price .unit { color: var(--muted); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+.kegs { grid-column: 1 / -1; display: flex; }
+.keg { flex: 0 1 380px; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 9px 9px 9px 14px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 10px; transition: border-color .15s, background-color .15s; }
+.keg.on { border-color: var(--mustard); background: var(--ink-3); }
+.keg-ico { width: 18px; height: 22px; flex: none; color: var(--muted); }
+.keg.on .keg-ico { color: var(--mustard); }
+.keg-ico rect, .keg-ico path { fill: none; stroke: currentColor; stroke-width: 1.6; }
+.keg-info { display: grid; min-width: 0; flex: 1; line-height: 1.3; }
+.keg-size { font-weight: 600; }
+.keg-price { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.stepper { display: flex; align-items: center; gap: 2px; padding: 3px; background: var(--ink); border-radius: 8px; flex: none; }
+.stepper button { width: 38px; height: 38px; border: 0; border-radius: 6px; background: var(--ink-3); color: var(--paper); font: 600 20px/1 var(--f-body); cursor: pointer; }
+.stepper button.plus { background: var(--mustard); color: var(--ink); }
+.stepper button.plus:hover { background: var(--mustard-2); }
+.stepper button:disabled { opacity: .35; cursor: default; }
+.stepper output { min-width: 30px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.all-ut { display: inline-block; margin-top: 18px; color: var(--muted); font-size: 14px; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.all-ut:hover { color: var(--paper); }
+
+@media (max-width: 640px) {
+  .list-head { display: none; }
+  .beer { grid-template-columns: minmax(0, 1fr) auto; padding-block: 22px; }
+  .beer-main { grid-column: 1 / -1; }
+  .specs { display: flex; flex-wrap: wrap; gap: 4px 16px; align-self: end; }
+  .specs div { gap: 6px; padding: 0; border: 0; }
+  .price { align-self: end; }
+  .price .num { font-size: 28px; }
+  .keg { flex-basis: 100%; }
+}
+
+.order { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); display: grid; gap: 18px; padding: 20px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 14px; }
+.order.done-mode { position: static; }
+@media (max-width: 900px) { .order { position: static; } }
+.order h2 { margin: 0; font: 800 18px/1.2 var(--f-display); text-transform: uppercase; }
+.stack { display: grid; gap: 18px; }
+.lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.lines .empty { color: var(--muted); font-size: 14px; }
+.line { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 4px 10px; align-items: start; }
+.line-name { font-weight: 600; }
+.line-det { grid-column: 1; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.line-sum { grid-row: 1; grid-column: 2; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.line-x { grid-row: 1 / span 2; grid-column: 3; width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--muted); font: 500 16px/1 var(--f-body); cursor: pointer; }
+.line-x:hover { color: var(--paper); border-color: var(--muted); }
+.totals { margin: 0; display: flex; flex-wrap: wrap; align-items: end; gap: 10px 18px; padding-block: 14px; border-block: 1px dashed var(--line); font-variant-numeric: tabular-nums; }
+.totals div { display: grid; gap: 4px; }
+.totals dt { color: var(--muted); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+.totals dd { margin: 0; font-weight: 700; font-size: 17px; }
+.totals .sum { margin-left: auto; text-align: right; }
+.totals .sum dd { color: var(--mustard); font: 800 22px/1.2 var(--f-display); white-space: nowrap; }
+
+.form { display: grid; gap: 12px; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.field { display: grid; gap: 5px; min-width: 0; }
+.field label { color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.field label i { color: var(--mustard); font-style: normal; }
+.field input, .field textarea { width: 100%; min-width: 0; padding: 10px 12px; background: var(--ink); color: var(--paper); border: 1px solid var(--line); border-radius: 8px; font: 400 15px/1.4 var(--f-body); }
+.field textarea { resize: vertical; min-height: 64px; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--mustard); }
+.field.bad input { border-color: var(--warn); }
+.errors { margin: 0; padding: 0; list-style: none; color: var(--warn); font-size: 13px; display: grid; gap: 2px; }
+.btn { text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 16px; border: 0; border-radius: 10px; background: var(--mustard); color: var(--ink); font: 600 14px/1.2 var(--f-display); letter-spacing: 0.02em; cursor: pointer; }
+.btn:hover { background: var(--mustard-2); }
+.btn.wide { width: 100%; }
+.btn.ghost { background: transparent; color: var(--paper); border: 1px solid var(--line); font: 600 13px/1.2 var(--f-body); padding: 9px 12px; }
+.btn.ghost:hover { border-color: var(--muted); }
+.linkbtn { justify-self: start; padding: 0; border: 0; background: none; color: var(--muted); font: 500 13px var(--f-body); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.linkbtn:hover { color: var(--paper); }
+.note { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+.status { min-height: 1.2em; margin: 0; font-size: 13px; color: var(--ok); }
+.status.err { color: var(--warn); }
+
+.done-head { display: grid; gap: 4px; }
+.done-mark { color: var(--ok); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.done-num { margin: 0; font: 800 26px/1.15 var(--f-display); }
+.done-text { margin: 0; color: var(--paper-2); }
+
+
+.foot {
+  margin-top: 64px;
+  background: var(--mustard);
+  color: var(--ink);
+  padding-block: 44px 28px;
+  clip-path: polygon(0.00% 8px, 1.79% 4px, 3.57% 4px, 5.36% 18px, 7.14% 6px, 8.93% 15px, 10.71% 6px, 12.50% 22px, 14.29% 18px, 16.07% 2px, 17.86% 4px, 19.64% 15px, 21.43% 15px, 23.21% 15px, 25.00% 22px, 26.79% 22px, 28.57% 4px, 30.36% 4px, 32.14% 12px, 33.93% 22px, 35.71% 4px, 37.50% 2px, 39.29% 12px, 41.07% 22px, 42.86% 12px, 44.64% 18px, 46.43% 15px, 48.21% 2px, 50.00% 22px, 51.79% 15px, 53.57% 6px, 55.36% 4px, 57.14% 22px, 58.93% 2px, 60.71% 9px, 62.50% 12px, 64.29% 6px, 66.07% 9px, 67.86% 18px, 69.64% 18px, 71.43% 22px, 73.21% 4px, 75.00% 6px, 76.79% 22px, 78.57% 18px, 80.36% 12px, 82.14% 6px, 83.93% 18px, 85.71% 12px, 87.50% 18px, 89.29% 15px, 91.07% 18px, 92.86% 9px, 94.64% 6px, 96.43% 4px, 98.21% 6px, 100.00% 8px, 100% 100%, 0 100%);
+}
+.foot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px 32px; }
+.foot h4 { margin: 0 0 4px; font: 600 11px/1.4 var(--f-body); letter-spacing: 0.14em; text-transform: uppercase; }
+.foot p { margin: 0; font-weight: 500; }
+.foot .big { font: 800 20px/1.3 var(--f-display); font-variant-numeric: tabular-nums; }
+.foot a { text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.foot .btn.ghost { color: var(--ink); border-color: var(--ink); padding: 5px 10px; margin-top: 6px; font-size: 12px; }
+.foot .btn.ghost:hover { background: var(--mustard-2); }
+.foot .status { color: var(--ink); }
+.foot .fine { margin-top: 26px; padding-top: 14px; border-top: 1.5px solid var(--ink); font-size: 12.5px; font-weight: 500; max-width: 80ch; }
+
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--mustard); color: var(--ink); font-variant-numeric: tabular-nums; }
+.dock-sum { font-weight: 600; font-size: 14px; line-height: 1.3; }
+.dock-sum b { display: block; font: 800 18px/1.2 var(--f-display); }
+.dock .btn { background: var(--ink); color: var(--mustard); }
+@media (min-width: 901px) { .dock { display: none !important; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+[hidden] { display: none !important; }
+.nojs .loading { display: none; }
+.nojs .stepper, .nojs #compose, .nojs #done, .nojs .dock { display: none !important; }
+.nojs .order { position: static; }
+.nojs-msg { display: none; gap: 8px; padding: 14px; border-radius: 10px; background: var(--ink-3); color: var(--paper-2); font-size: 14px; line-height: 1.5; }
+.nojs .nojs-msg { display: grid; }
+.group-h { display: inline-block; margin: 34px 0 10px; padding: 7px 14px; border-radius: 6px; background: var(--mustard); color: var(--ink); font: 800 14px/1.2 var(--f-display); letter-spacing: 0.06em; text-transform: uppercase; }
+#beers > .group-h:first-child { margin-top: 14px; }
+@media (max-width: 640px) { .group-h { margin-bottom: 8px; } }
+.lines.static .line { grid-template-columns: minmax(0, 1fr) auto; }
+.done-sum { margin: 0; padding-top: 12px; border-top: 1px dashed var(--line); font-weight: 600; font-variant-numeric: tabular-nums; }
+.notice { margin: 0; padding: 10px 12px; border-radius: 8px; background: var(--ink-3); color: var(--paper-2); font-size: 13.5px; line-height: 1.45; }
+.notice.warn { color: var(--warn); }
+.note a { color: var(--paper); overflow-wrap: anywhere; }
+.btn:disabled { opacity: .6; cursor: default; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.keg-stock { color: var(--warn); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.keg.out { opacity: .6; }
+.points { display: flex; flex-wrap: wrap; gap: 6px; }
+.points button { border: 1px solid var(--line); background: transparent; color: var(--paper-2); border-radius: 999px; padding: 5px 11px; font: 500 12.5px/1.3 var(--f-body); cursor: pointer; text-align: left; }
+.points button:hover { border-color: var(--muted); }
+.foot #mgr-hint { font-size: 13px; }
+.loading { margin: 40px 0; color: var(--muted); }
+.lead { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 36px; align-items: start; margin-top: 28px; }
+@media (max-width: 900px) { .lead { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
+.lead h2 { margin: 0 0 14px; font: 800 clamp(26px, 3.4vw, 38px)/1.1 var(--f-display); text-transform: uppercase; }
+.lead-text p { margin: 0 0 14px; color: var(--paper-2); max-width: 56ch; font-size: 16px; }
+.lead-call a { color: var(--mustard); font: 800 20px/1.4 var(--f-display); text-decoration: none; white-space: nowrap; }
+.lead-call span { color: var(--muted); font-size: 14px; }
+.lead-warn { padding: 10px 12px; border-radius: 8px; background: var(--ink-3); color: var(--warn) !important; }
+.lead .back { color: var(--paper); text-decoration-color: var(--mustard); text-underline-offset: 3px; }
+.lead-box { position: static; }
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="shell band-in">
+    <div class="brand">
+      <h1 class="wordmark"><a href="../" class="home"><span>Diysno</span><span>Brewery</span></a></h1>
+      <svg class="hop" viewBox="0 0 48 66" aria-hidden="true">
+        <path d="M24 2v8"/>
+        <path d="M24 7c5-5 12-5 17 0-5 4-12 4-17 0z"/>
+        <path d="M24 10C12 13 6 25 8 39c2 12 9 20 16 24 7-4 14-12 16-24 2-14-4-26-16-29z"/>
+        <path d="M11 23c4 5 9 5 13 0 4 5 9 5 13 0"/>
+        <path d="M8.5 34c5 6 11 6 15.5 0 4.5 6 10.5 6 15.5 0"/>
+        <path d="M10 46c4.5 6 10 6 14 0 4 6 9.5 6 14 0"/>
+        <path d="M24 23v36"/>
+      </svg>
+    </div>
+    <div class="band-meta">
+      <p class="band-title" id="band-title">Замовлення для закладів</p>
+      <p class="band-sub" id="upd">Кеги 30 л і пляшки · доставка по Україні</p>
+    </div>
+  </div>
+</header>
+<div class="spray" aria-hidden="true"></div>
+
+<main class="shell">
+  <p class="loading" id="loading">Завантажуємо…</p>
+  <noscript><p class="loading" style="display:block">Сторінка працює, коли її відкрито в браузері з увімкненим JavaScript (Chrome чи Safari). Або зателефонуйте менеджеру: +380 93 056 82 63.</p></noscript>
+
+  <section class="lead" id="lead" hidden aria-labelledby="lead-h">
+    <div class="lead-text">
+      <h2 id="lead-h">Стати партнером</h2>
+      <p class="lead-warn" id="lead-warn" hidden>Це посилання не спрацювало. Залиште заявку або зателефонуйте — менеджер надішле правильне.</p>
+      <p>Працюємо з барами, пабами й магазинами по всій Україні. Залиште контакти — менеджер звʼяжеться з вами, розповість про асортимент і умови та надішле особисте посилання для замовлень.</p>
+      <p class="lead-call">Або зателефонуйте: <a href="tel:+380930568263">+380 93 056 82 63</a><br><span>Пн–Пт 9:00–18:00, Сб 9:00–15:00</span></p>
+      <p><a class="back" href="../">← Про броварню і наше пиво</a></p>
+    </div>
+    <div class="order lead-box">
+      <form class="form" id="lead-form" novalidate>
+        <input class="hp" id="l-site" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field" data-for="venue">
+          <label for="l-venue">Заклад <i>*</i></label>
+          <input id="l-venue" data-l="venue" autocomplete="organization" placeholder="Назва бару, пабу чи магазину">
+        </div>
+        <div class="field" data-for="city">
+          <label for="l-city">Місто <i>*</i></label>
+          <input id="l-city" data-l="city" autocomplete="address-level2">
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="l-contact">Контактна особа</label>
+            <input id="l-contact" data-l="contact" autocomplete="name">
+          </div>
+          <div class="field" data-for="phone">
+            <label for="l-phone">Телефон <i>*</i></label>
+            <input id="l-phone" data-l="phone" type="tel" autocomplete="tel" placeholder="0__ ___ __ __">
+          </div>
+        </div>
+        <div class="field">
+          <label for="l-comment">Коментар</label>
+          <textarea id="l-comment" data-l="comment" rows="3" placeholder="Яке пиво цікавить, скільки приблизно потрібно"></textarea>
+        </div>
+        <ul class="errors" id="l-errors" aria-live="polite"></ul>
+        <button class="btn wide" type="submit" id="l-submit">Надіслати заявку</button>
+      </form>
+      <div class="stack" id="l-done" hidden>
+        <span class="done-mark">Заявку отримано</span>
+        <p class="done-text">Дякуємо! Менеджер звʼяжеться з вами найближчим часом і надішле особисте посилання для замовлень.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="shop" hidden>
+  <ol class="steps" aria-label="Як замовити">
+    <li><b>1</b>Оберіть пиво: кеги по 30 л або пляшки</li>
+    <li><b>2</b>Вкажіть дані закладу — наступного разу підставляться самі</li>
+    <li><b>3</b>Надішліть — замовлення одразу потрапляє до менеджера броварні</li>
+  </ol>
+  <div class="promo" id="promo">
+    <p><b>Від двох кегів доставка за наш рахунок.</b></p>
+    <p id="promo-cycle" hidden></p>
+  </div>
+
+  <div class="layout">
+    <section aria-label="Пиво в наявності">
+      <div id="beers"><!--BEERS--></div>
+      <a class="all-ut" href="https://untappd.com/DiysnoBrewery" target="_blank" rel="noopener">Усі пива броварні на Untappd ↗</a>
+    </section>
+
+    <aside class="order" id="order" aria-labelledby="order-h">
+      <h2 id="order-h">Замовлення</h2>
+      <div class="nojs-msg">
+        <span>Кошик працює, коли сторінку відкрито в браузері (Chrome чи Safari).</span>
+      </div>
+
+      <div class="myorders" id="myorders" hidden></div>
+
+      <div class="stack" id="compose">
+        <p class="notice" id="notice" hidden></p>
+        <p class="editing" id="editing" hidden></p>
+        <button class="btn ghost wide" type="button" id="repeat" hidden>Повторити минуле замовлення</button>
+        <ul class="lines" id="lines"></ul>
+        <dl class="totals">
+          <div><dt>Кегів</dt><dd id="t-kegs">0</dd></div>
+          <div><dt>Літрів</dt><dd id="t-liters">0</dd></div>
+          <div id="t-bottles-box" hidden><dt>Пляшок</dt><dd id="t-bottles">0</dd></div>
+          <div class="sum"><dt>Сума</dt><dd id="t-sum">0 грн</dd></div>
+        </dl>
+        <p class="notice" id="ship" hidden></p>
+        <form class="form" id="form" novalidate>
+          <p class="note" id="hello" hidden></p>
+          <input class="hp" id="f-site" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field" data-for="venue">
+            <label for="f-venue">Заклад <i>*</i></label>
+            <input id="f-venue" data-f="venue" autocomplete="organization" placeholder="Назва бару, пабу чи магазину">
+          </div>
+          <div class="field" data-for="city">
+            <label for="f-city">Місто <i>*</i></label>
+            <input id="f-city" data-f="city" autocomplete="address-level2">
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="f-contact">Контактна особа</label>
+              <input id="f-contact" data-f="contact" autocomplete="name">
+            </div>
+            <div class="field" data-for="phone">
+              <label for="f-phone">Телефон <i>*</i></label>
+              <input id="f-phone" data-f="phone" type="tel" autocomplete="tel" placeholder="0__ ___ __ __">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-address">Доставка</label>
+            <input id="f-address" data-f="address" autocomplete="street-address" placeholder="Відділення Нової пошти або адреса">
+            <div class="points" id="points" hidden></div>
+          </div>
+          <div class="field">
+            <label for="f-comment">Коментар</label>
+            <textarea id="f-comment" data-f="comment" rows="2" placeholder="Коли потрібна відправка, інші побажання"></textarea>
+          </div>
+          <ul class="errors" id="errors" aria-live="polite"></ul>
+          <button class="btn wide" type="submit" id="submit">Надіслати замовлення</button>
+          <button class="linkbtn" type="button" id="clear">Очистити кошик</button>
+        </form>
+      </div>
+
+      <div class="stack" id="done" hidden>
+        <div class="done-head">
+          <span class="done-mark">Замовлення прийнято</span>
+          <p class="done-num" id="done-num"></p>
+          <p class="done-text" id="done-text"></p>
+        </div>
+        <ul class="lines static" id="done-lines"></ul>
+        <p class="done-sum" id="done-sum"></p>
+        <p class="note" id="done-link" hidden></p>
+        <button class="btn wide" type="button" id="again">Нове замовлення</button>
+      </div>
+
+      <p class="note">Це заявка для закладів-партнерів, не покупка. Поставка — за договором з броварнею, рахунок і видаткову накладну оформлює бухгалтерія. Оплата на сайті не приймається.</p>
+    </aside>
+  </div>
+  </div>
+</main>
+
+<div class="spray spray-up" aria-hidden="true"></div>
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <h4>Менеджер по закладах</h4>
+        <p class="big"><a href="tel:+380930568263">+380 93 056 82 63</a></p>
+        <p id="mgr-hint">Пн–Пт 9:00–18:00, Сб 9:00–15:00</p>
+      </div>
+      <div>
+        <h4>Instagram</h4>
+        <p class="big"><a href="https://www.instagram.com/diysno_brewery/" target="_blank" rel="noopener">@diysno_brewery ↗</a></p>
+      </div>
+      <div>
+        <h4>Untappd</h4>
+        <p><a href="https://untappd.com/DiysnoBrewery" target="_blank" rel="noopener">Сторінка броварні ↗</a></p>
+      </div>
+    </div>
+    <p class="fine">Рейтинг і кількість оцінок — з Untappd. Інформація на сайті призначена для осіб, яким виповнилося 18 років.</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock" hidden>
+  <div class="dock-sum" id="dock-sum"></div>
+  <button class="btn" type="button" id="dock-go">До замовлення</button>
+</div>
+
+<script type="application/json" id="catalog">
+{
+  "brewery": "Diysno Brewery",
+  "kegL": 30,
+  "bottleL": 0.33,
+  "api": "https://script.google.com/macros/s/AKfycbxzPllKUYE0g9ia2qawOyP0WAdOInNYIl3Q_3kV2IJf__Fz6RsbnOQO8lobSfoaz__k/exec",
+  "beers": []
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var CAT = JSON.parse(document.getElementById("catalog").textContent);
+  var API = String(CAT.api || "");
+  var BEERS = CAT.beers;
+  var KEG = CAT.kegL;
+  var BOTTLE = CAT.bottleL;
+  var OPEN = true;
+  var byId = {};
+  function reindex() { byId = {}; BEERS.forEach(function (b) { byId[b.id] = b; }); }
+  reindex();
+
+  var KEY = "diysno-v4";
+  var KEEP = ["venue", "city", "contact", "phone", "address"];
+  var nf = new Intl.NumberFormat("uk-UA");
+  var nf1 = new Intl.NumberFormat("uk-UA", { maximumFractionDigits: 1 });
+  var nf2 = new Intl.NumberFormat("uk-UA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function $(id) { return document.getElementById(id); }
+  function money(n) { return nf.format(n) + " грн"; }
+  function plural(n, one, few, many) {
+    var m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return one;
+    if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+    return many;
+  }
+  function kegWord(n) { return plural(n, "кег", "кеги", "кегів"); }
+  function bottleWord(n) { return plural(n, "пляшка", "пляшки", "пляшок"); }
+  function rateWord(n) { return plural(n, "оцінка", "оцінки", "оцінок"); }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function validCode(c) { return /^[A-Za-z0-9]{6,16}$/.test(c || "") ? c : ""; }
+
+  var VIEW = "";
+  function showView(v, badLink) {
+    VIEW = v;
+    $("loading").hidden = v !== "loading";
+    $("lead").hidden = v !== "lead";
+    $("shop").hidden = v !== "shop";
+    $("lead-warn").hidden = !(v === "lead" && badLink);
+    $("band-title").textContent = v === "lead" ? "Для закладів" : "Замовлення для закладів";
+    if (v !== "shop") { $("dock").hidden = true; document.body.classList.remove("has-dock"); }
+  }
+
+  var state = { cart: {}, form: { venue: "", city: "", contact: "", phone: "", address: "", comment: "" }, code: "" };
+  try {
+    var saved = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (saved && typeof saved === "object") {
+      if (saved.cart && typeof saved.cart === "object") state.cart = saved.cart;
+      if (saved.form && typeof saved.form === "object") {
+        KEEP.forEach(function (k) { if (typeof saved.form[k] === "string") state.form[k] = saved.form[k]; });
+      }
+      state.code = validCode(saved.code);
+    }
+  } catch (e) {}
+  var urlCode = "";
+  try { urlCode = validCode(new URLSearchParams(location.search).get("c")); } catch (e) {}
+  if (urlCode) {
+    if (state.code && state.code !== urlCode) KEEP.forEach(function (k) { state.form[k] = ""; });
+    state.code = urlCode;
+  }
+
+  function maxOf(id) {
+    var b = byId[id];
+    if (!b || typeof b.max !== "number") return 999;
+    var own = 0;
+    if (editN) OPENORD.forEach(function (o) { if (o.n === editN) own = o.items[id] || 0; });
+    return Math.min(999, b.max + own);
+  }
+  function pruneCart() {
+    var cut = [];
+    Object.keys(state.cart).forEach(function (id) {
+      var n = state.cart[id];
+      if (!byId[id] || !(n > 0)) { delete state.cart[id]; return; }
+      var m = Math.min(maxOf(id), Math.floor(n));
+      if (m < n) cut.push(byId[id].name);
+      if (m > 0) state.cart[id] = m; else delete state.cart[id];
+    });
+    return cut;
+  }
+  if (BEERS.length) pruneCart();
+
+  var saveTimer;
+  function save() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () {
+      var keep = {};
+      KEEP.forEach(function (k) { keep[k] = state.form[k]; });
+      try { localStorage.setItem(KEY, JSON.stringify({ cart: state.cart, form: keep, code: state.code })); } catch (e) {}
+    }, 300);
+  }
+
+  function burstSvg() {
+    var n = 16, R = 25, r = 20, c = 26, pts = [];
+    for (var i = 0; i < n * 2; i++) {
+      var a = Math.PI * i / n - Math.PI / 2, rad = i % 2 ? r : R;
+      pts.push((c + rad * Math.cos(a)).toFixed(1) + "," + (c + rad * Math.sin(a)).toFixed(1));
+    }
+    return '<svg class="burst" viewBox="0 0 52 52" aria-hidden="true"><polygon points="' + pts.join(" ") +
+      '"/><text x="26" y="29.5" text-anchor="middle" transform="rotate(-14 26 26)">NEW!</text></svg>';
+  }
+  var KEG_SVG = '<svg class="keg-ico" viewBox="0 0 18 22" aria-hidden="true"><rect x="2" y="2.5" width="14" height="18.5" rx="3"/><path d="M2 7.5h14M2 16h14"/><rect x="7" y="0.8" width="4" height="1.7" rx="0.8"/></svg>';
+  var BOTTLE_SVG = '<svg class="keg-ico" viewBox="0 0 18 22" aria-hidden="true"><path d="M7 1h4v5l2.5 3.5V19a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2V9.5L7 6z"/><path d="M4.5 13h9"/></svg>';
+
+  function utHtml(b) {
+    if (!b.ut || !b.ut.url) return "";
+    var link = '<a href="' + esc(b.ut.url) + '" target="_blank" rel="noopener">Untappd ↗</a>';
+    if (!b.ut.rating) return '<p class="ut">' + link + "<span>" + (b.ut.ratings > 0 ? "оцінок ще замало для рейтингу" : "оцінок ще немає") + "</span></p>";
+    var w = (b.ut.rating / 5 * 100).toFixed(1) + "%";
+    return '<p class="ut">' + link +
+      '<span class="caps" style="--w:' + w + '" role="img" aria-label="Рейтинг ' + nf2.format(b.ut.rating) + ' з 5"></span>' +
+      '<b class="rate">' + nf2.format(b.ut.rating) + "</b><span>" + nf.format(b.ut.ratings) + " " + rateWord(b.ut.ratings) + "</span></p>";
+  }
+  function specRow(label, v, suffix) {
+    return "<div><dt>" + label + "</dt><dd>" + (v == null ? "—" : nf1.format(v) + (suffix || "")) + "</dd></div>";
+  }
+  function beerHtml(b) {
+    var bottle = b.unit === "bottle";
+    var specs = bottle
+      ? "<div><dt>Обʼєм</dt><dd>" + nf2.format(BOTTLE) + " л</dd></div>"
+      : specRow("ABV", b.abv, "%") + specRow("IBU", b.ibu) + specRow("OG", b.og, "°P");
+    var sizeLabel = bottle ? "Пляшка " + nf2.format(BOTTLE) + " л" : "Кег " + KEG + " л";
+    var priceLabel = bottle ? money(b.price) + " за пляшку" : money(KEG * b.price) + " за кег";
+    var what = bottle ? "пляшку" : "кег";
+    return '<article class="beer">' +
+      '<div class="beer-main">' +
+        '<div class="name-row">' + (b.isNew ? burstSvg() + '<span class="sr">Новинка.</span>' : "") +
+          '<h3 class="beer-name">' + esc(b.name) + "</h3></div>" +
+        '<p class="beer-style">' + esc(b.style) + "</p>" +
+        '<p class="beer-desc">' + esc(b.description) + "</p>" +
+        utHtml(b) +
+      "</div>" +
+      '<dl class="specs">' + specs + "</dl>" +
+      '<div class="price"><span class="num">' + nf.format(b.price) + '</span><span class="unit">' + (bottle ? "грн/пляшка" : "грн/л") + "</span></div>" +
+      '<div class="kegs"><div class="keg" data-id="' + esc(b.id) + '">' + (bottle ? BOTTLE_SVG : KEG_SVG) +
+        '<div class="keg-info"><span class="keg-size">' + sizeLabel + '</span><span class="keg-price">' + priceLabel + '</span><span class="keg-stock" hidden></span></div>' +
+        '<div class="stepper">' +
+          '<button type="button" class="minus" data-d="-1" aria-label="Прибрати одну позицію: ' + what + ", " + esc(b.name) + '">−</button>' +
+          '<output aria-live="polite">0</output>' +
+          '<button type="button" class="plus" data-d="1" aria-label="Додати ' + what + ", " + esc(b.name) + '">+</button>' +
+        "</div></div></div>" +
+    "</article>";
+  }
+  function groupHtml(title, unitLabel, arr) {
+    if (!arr.length) return "";
+    return '<h2 class="group-h">' + title + "</h2>" +
+      '<div class="list-head" aria-hidden="true"><span>Пиво</span><span>Параметри</span><span>' + unitLabel + "</span></div>" +
+      arr.map(beerHtml).join("");
+  }
+
+  var list = $("beers");
+  function renderList() {
+    list.innerHTML =
+      groupHtml("Кеги · " + KEG + " л", "грн/л", BEERS.filter(function (b) { return b.unit !== "bottle"; })) +
+      groupHtml("Пляшки · " + nf2.format(BOTTLE) + " л", "грн/пляшка", BEERS.filter(function (b) { return b.unit === "bottle"; }));
+  }
+  renderList();
+  list.addEventListener("click", function (e) {
+    var btn = e.target.closest("button[data-d]");
+    if (!btn) return;
+    var id = btn.closest(".keg").getAttribute("data-id");
+    setCount(id, (state.cart[id] || 0) + Number(btn.getAttribute("data-d")));
+  });
+  function setCount(id, n) {
+    n = Math.max(0, Math.min(maxOf(id), n));
+    if (n === 0) delete state.cart[id]; else state.cart[id] = n;
+    update();
+  }
+
+  var FREE = 2;
+  function items() {
+    return BEERS.filter(function (b) { return state.cart[b.id] > 0; }).map(function (b) {
+      var n = state.cart[b.id];
+      if (b.unit === "bottle") return { id: b.id, name: b.name, unit: "bottle", qty: n, kegs: 0, bottles: n, liters: 0, sum: n * b.price };
+      return { id: b.id, name: b.name, unit: "keg", qty: n, kegs: n, bottles: 0, liters: n * KEG, sum: n * KEG * b.price };
+    });
+  }
+  function totals(it) {
+    return it.reduce(function (t, x) { t.kegs += x.kegs; t.bottles += x.bottles; t.liters += x.liters; t.sum += x.sum; return t; }, { kegs: 0, bottles: 0, liters: 0, sum: 0 });
+  }
+  function detail(x) {
+    if (x.unit === "bottle") return x.bottles + " " + bottleWord(x.bottles) + " × " + nf2.format(BOTTLE) + " л";
+    return x.kegs + " " + kegWord(x.kegs) + " × " + KEG + " л = " + nf.format(x.liters) + " л";
+  }
+  function summary(t) {
+    var p = [];
+    if (t.kegs) p.push(nf.format(t.kegs) + " " + kegWord(t.kegs) + " · " + nf.format(t.liters) + " л");
+    if (t.bottles) p.push(nf.format(t.bottles) + " " + bottleWord(t.bottles));
+    return p.join(" · ");
+  }
+  function lineHtml(x, removable) {
+    return '<li class="line"><span class="line-name">' + esc(x.name) + "</span>" +
+      '<span class="line-sum">' + money(x.sum) + "</span>" +
+      (removable ? '<button type="button" class="line-x" data-x="' + esc(x.id) + '" aria-label="Прибрати ' + esc(x.name) + '">×</button>' : "") +
+      '<span class="line-det">' + detail(x) + "</span></li>";
+  }
+
+  var mode = "compose";
+  var orderVisible = false;
+
+  function update() {
+    var it = items(), t = totals(it);
+    list.querySelectorAll(".keg").forEach(function (el) {
+      var id = el.getAttribute("data-id"), n = state.cart[id] || 0, b = byId[id] || {};
+      el.querySelector("output").textContent = n;
+      el.querySelector(".minus").disabled = n === 0;
+      el.querySelector(".plus").disabled = n >= maxOf(id);
+      el.classList.toggle("on", n > 0);
+      el.classList.toggle("out", b.state === "out");
+      var st = el.querySelector(".keg-stock");
+      if (st) {
+        st.textContent = b.state === "out" ? "Закінчився" : b.state === "low" ? "Закінчується" : "";
+        st.hidden = !st.textContent;
+      }
+    });
+    $("lines").innerHTML = it.length
+      ? it.map(function (x) { return lineHtml(x, true); }).join("")
+      : '<li class="empty">Поки порожньо. Додайте пиво кнопкою «+» біля потрібної позиції.</li>';
+    $("t-kegs").textContent = nf.format(t.kegs);
+    $("t-liters").textContent = nf.format(t.liters);
+    $("t-bottles").textContent = nf.format(t.bottles);
+    $("t-bottles-box").hidden = t.bottles === 0;
+    $("t-sum").textContent = money(t.sum);
+    var sh = $("ship");
+    if (t.kegs > 0) {
+      var free = t.kegs >= FREE;
+      sh.textContent = free ? "Доставка Новою поштою — за наш рахунок." : "Доставка Новою поштою — за рахунок закладу, за тарифом перевізника. Від " + FREE + " кегів у замовленні доставку оплачуємо ми.";
+      sh.classList.toggle("free", free);
+      sh.hidden = false;
+    } else sh.hidden = true;
+    $("dock-sum").innerHTML = "<b>" + money(t.sum) + "</b>" + summary(t);
+    refreshDock();
+    save();
+  }
+  function refreshDock() {
+    var show = VIEW === "shop" && mode === "compose" && items().length > 0 && !orderVisible;
+    $("dock").hidden = !show;
+    document.body.classList.toggle("has-dock", show);
+  }
+  $("lines").addEventListener("click", function (e) {
+    var x = e.target.closest("button[data-x]");
+    if (x) setCount(x.getAttribute("data-x"), 0);
+  });
+
+  var form = $("form");
+  var inputs = {};
+  form.querySelectorAll("[data-f]").forEach(function (inp) {
+    var f = inp.getAttribute("data-f");
+    inputs[f] = inp;
+    inp.value = state.form[f] || "";
+    inp.addEventListener("input", function () {
+      state.form[f] = inp.value;
+      var field = inp.closest(".field");
+      if (field) field.classList.remove("bad");
+      save();
+    });
+  });
+  function setField(f, v) {
+    state.form[f] = v;
+    if (inputs[f]) inputs[f].value = v;
+  }
+
+  function showNotice(text, warn) {
+    var el = $("notice");
+    el.textContent = text || "";
+    el.className = "notice" + (warn ? " warn" : "");
+    el.hidden = !text;
+  }
+  function showErrors(arr) {
+    $("errors").innerHTML = arr.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("");
+  }
+
+  function validate() {
+    var errs = [], f = state.form;
+    form.querySelectorAll(".field").forEach(function (el) { el.classList.remove("bad"); });
+    function bad(name, msg) {
+      errs.push(msg);
+      var el = form.querySelector('[data-for="' + name + '"]');
+      if (el) el.classList.add("bad");
+    }
+    if (!items().length) errs.push("Додайте хоча б одну позицію.");
+    if (!f.venue.trim()) bad("venue", "Вкажіть назву закладу.");
+    if (!f.city.trim()) bad("city", "Вкажіть місто.");
+    var digits = f.phone.replace(/\D/g, "");
+    if (!digits) bad("phone", "Вкажіть телефон для зв'язку.");
+    else if (digits.length < 10) bad("phone", "Телефон закороткий: потрібно щонайменше 10 цифр.");
+    return errs;
+  }
+
+  var serverNotice = "";
+  var LAST = null;
+  function lastItems() {
+    var out = {}, any = false, full = true;
+    Object.keys(LAST || {}).forEach(function (id) {
+      var q = LAST[id];
+      if (!(q > 0)) return;
+      var m = byId[id] ? Math.min(maxOf(id), q) : 0;
+      if (m < q) full = false;
+      if (m > 0) { out[id] = m; any = true; }
+    });
+    return { items: out, any: any, full: full };
+  }
+  function renderPoints(points) {
+    var box = $("points");
+    var list = (points || []).filter(function (p) { return p; });
+    box.hidden = list.length < 2;
+    box.innerHTML = list.map(function (p) { return '<button type="button" data-p="' + esc(p) + '">' + esc(p) + "</button>"; }).join("");
+  }
+  $("points").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-p]");
+    if (!b) return;
+    setField("address", b.getAttribute("data-p"));
+    save();
+  });
+  $("repeat").addEventListener("click", function () {
+    var l = lastItems();
+    if (!l.any) return;
+    state.cart = l.items;
+    showErrors(l.full ? [] : ["Частини минулого замовлення зараз немає в наявності — підставлено те, що є."]);
+    update();
+  });
+  var OPENORD = [], editN = 0, flash = "", sure = 0;
+  function itemsText(map) {
+    return Object.keys(map || {}).filter(function (id) { return map[id] > 0; }).map(function (id) {
+      var b = byId[id], q = map[id];
+      if (!b) return q + " ×";
+      return b.name + " — " + (b.unit === "bottle" ? q + " " + bottleWord(q) : q + " " + kegWord(q));
+    }).join(", ");
+  }
+  function renderMy() {
+    var box = $("myorders");
+    box.hidden = !OPENORD.length;
+    box.innerHTML = OPENORD.map(function (o) {
+      var editing = editN === o.n;
+      return '<div class="my"><h3>Ваше замовлення № ' + o.n + (editing ? " · редагується" : "") + "</h3>" +
+        "<p>" + esc(itemsText(o.items)) + " · " + money(o.sum) + "</p>" +
+        "<p>Поки збір не закрито, його можна змінити або скасувати.</p>" +
+        '<div class="my-btns"><button type="button" class="btn ghost" data-my="edit" data-n="' + o.n + '">Змінити</button>' +
+        '<button type="button" class="btn ghost danger' + (sure === o.n ? " sure" : "") + '" data-my="cancel" data-n="' + o.n + '">' + (sure === o.n ? "Так, скасувати" : "Скасувати") + "</button></div></div>";
+    }).join("");
+    var ed = $("editing"), btn = $("submit");
+    if (editN) {
+      ed.innerHTML = "Ви змінюєте замовлення № " + editN + '<button type="button" id="edit-off">Не змінювати</button>';
+      ed.hidden = false;
+      btn.textContent = "Зберегти зміни";
+    } else { ed.hidden = true; btn.textContent = "Надіслати замовлення"; }
+  }
+  function leaveEdit(clear) {
+    editN = 0;
+    if (clear) { state.cart = {}; setField("comment", ""); }
+    renderMy();
+    update();
+  }
+  function postMy(payload) {
+    payload.a = "my";
+    payload.client = state.code;
+    return fetch(API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) }).then(function (r) { return r.json(); });
+  }
+  function backToCompose() {
+    mode = "compose";
+    $("done").hidden = true;
+    $("compose").hidden = false;
+    $("order").classList.remove("done-mode");
+  }
+  $("myorders").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-my]");
+    if (!b) return;
+    var n = Number(b.getAttribute("data-n")), act = b.getAttribute("data-my");
+    var o = OPENORD.filter(function (x) { return x.n === n; })[0];
+    if (!o) return;
+    if (act === "edit") {
+      sure = 0;
+      editN = n;
+      state.cart = {};
+      Object.keys(o.items).forEach(function (id) { if (o.items[id] > 0 && byId[id]) state.cart[id] = Math.min(o.items[id], maxOf(id) || o.items[id]); });
+      setField("address", o.address || state.form.address || "");
+      setField("comment", o.comment || "");
+      backToCompose();
+      showErrors([]);
+      renderMy();
+      update();
+      var top = document.querySelector(".layout");
+      if (top) top.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    if (sure !== n) { sure = n; renderMy(); return; }
+    b.disabled = true;
+    postMy({ act: "cancel", n: n }).then(function (j) {
+      sure = 0;
+      if (!j || !j.ok) { showErrors([(j && j.error) || "Не вдалося скасувати. Спробуйте ще раз."]); renderMy(); return; }
+      if (editN === n) editN = 0;
+      flash = "Замовлення № " + n + " скасовано.";
+      backToCompose();
+      showErrors([]);
+      return loadCatalog(true);
+    }).catch(function () { sure = 0; showErrors(["Немає зв'язку з сервером. Спробуйте ще раз."]); renderMy(); });
+  });
+  document.addEventListener("click", function (e) {
+    if (e.target && e.target.id === "edit-off") leaveEdit(true);
+  });
+  function applyCatalog(j) {
+    if (!j.client) {
+      state.code = "";
+      BEERS = [];
+      reindex();
+      state.cart = {};
+      save();
+      showView("lead", !!urlCode);
+      return;
+    }
+    if (VIEW !== "shop") showView("shop");
+    if (Array.isArray(j.beers) && j.beers.length) {
+      BEERS = j.beers;
+      if (j.kegL > 0) KEG = j.kegL;
+      if (j.bottleL > 0) BOTTLE = j.bottleL;
+      if (j.freeShip > 0) FREE = j.freeShip;
+      reindex();
+      var cut = pruneCart();
+      renderList();
+      if (cut.length) showErrors(["Кількість у кошику зменшено до доступного залишку: " + cut.join(", ") + "."]);
+    }
+    LAST = j.client && j.client.last ? j.client.last : null;
+    $("repeat").hidden = !lastItems().any;
+    renderPoints(j.client ? j.client.points : []);
+    OPEN = j.open !== false;
+    serverNotice = j.notice || "";
+    var pc = $("promo-cycle");
+    if (pc) { pc.textContent = serverNotice; pc.hidden = !serverNotice; }
+    var pb = document.querySelector("#promo b");
+    if (pb && FREE !== 2) pb.textContent = "Від " + FREE + " кегів доставка за наш рахунок.";
+    OPENORD = j.client && j.client.open ? j.client.open : [];
+    if (editN && !OPENORD.some(function (o) { return o.n === editN; })) editN = 0;
+    if (!OPEN) showNotice("Зараз замовлення не приймаються. Прайс — для ознайомлення.", true);
+    else if (flash) { showNotice(flash, false); flash = ""; }
+    else showNotice(serverNotice, false);
+    renderMy();
+    $("submit").disabled = !OPEN;
+    if (j.client) {
+      state.code = j.client.code;
+      KEEP.forEach(function (k) { if (j.client[k]) setField(k, j.client[k]); });
+      $("hello").textContent = "Дані закладу підставлено з вашого посилання. Перевірте їх перед відправкою.";
+      $("hello").hidden = false;
+    }
+    update();
+  }
+
+  function loadCatalog(quiet) {
+    return fetch(API + "?a=cat" + (state.code ? "&client=" + encodeURIComponent(state.code) : ""))
+      .then(function (r) { return r.json(); })
+      .then(function (j) { if (j && j.ok) applyCatalog(j); else throw new Error("bad"); })
+      .catch(function () {
+        if (VIEW === "loading") $("loading").textContent = "Не вдалося завантажити сторінку. Перезавантажте її за хвилину або зателефонуйте менеджеру: +380 93 056 82 63.";
+        else if (!quiet) showNotice("Не вдалося оновити прайс із сервера. Перезавантажте сторінку, перш ніж замовляти.", true);
+      });
+  }
+  if (state.code && API) { showView("loading"); loadCatalog(); }
+  else showView("lead", false);
+
+  var leadForm = $("lead-form"), leadSending = false;
+  leadForm.addEventListener("input", function (e) {
+    var fl = e.target.closest(".field");
+    if (fl) fl.classList.remove("bad");
+  });
+  leadForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (leadSending) return;
+    var v = {};
+    leadForm.querySelectorAll("[data-l]").forEach(function (el) { v[el.getAttribute("data-l")] = el.value.trim(); });
+    var errs = [];
+    leadForm.querySelectorAll(".field").forEach(function (el) { el.classList.remove("bad"); });
+    function bad(name, msg) { errs.push(msg); var el = leadForm.querySelector('[data-for="' + name + '"]'); if (el) el.classList.add("bad"); }
+    if (!v.venue) bad("venue", "Вкажіть назву закладу.");
+    if (!v.city) bad("city", "Вкажіть місто.");
+    var digits = (v.phone || "").replace(/\D/g, "");
+    if (!digits) bad("phone", "Вкажіть телефон для звʼязку.");
+    else if (digits.length < 10) bad("phone", "Телефон закороткий: потрібно щонайменше 10 цифр.");
+    $("l-errors").innerHTML = errs.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("");
+    if (errs.length) { var first = leadForm.querySelector(".field.bad input"); if (first) first.focus(); return; }
+    if (!API) return;
+    var btn = $("l-submit");
+    leadSending = true;
+    btn.disabled = true;
+    btn.textContent = "Надсилаємо…";
+    v.a = "lead";
+    v.hp = $("l-site").value;
+    fetch(API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(v) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j || !j.ok) { $("l-errors").innerHTML = "<li>" + esc((j && j.error) || "Не вдалося надіслати заявку. Спробуйте ще раз.") + "</li>"; return; }
+        leadForm.hidden = true;
+        $("l-done").hidden = false;
+      })
+      .catch(function () { $("l-errors").innerHTML = "<li>Немає звʼязку з сервером. Перевірте інтернет і натисніть ще раз або зателефонуйте.</li>"; })
+      .then(function () { leadSending = false; btn.disabled = false; btn.textContent = "Надіслати заявку"; });
+  });
+
+  var sending = false;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (sending) return;
+    var errs = validate();
+    showErrors(errs);
+    if (errs.length) {
+      var first = form.querySelector(".field.bad input");
+      if (first) first.focus();
+      return;
+    }
+    if (!API) { showErrors(["Сторінку ще не підключено до бази замовлень."]); return; }
+    var it = items(), t = totals(it), f = state.form;
+    var payload = {
+      client: state.code, venue: f.venue.trim(), city: f.city.trim(), contact: f.contact.trim(), phone: f.phone.trim(),
+      address: f.address.trim(), comment: f.comment.trim(), hp: $("f-site").value,
+      items: it.map(function (x) { return { id: x.id, qty: x.qty }; })
+    };
+    var btn = $("submit"), wasEdit = editN;
+    if (wasEdit) { payload.a = "my"; payload.act = "edit"; payload.n = wasEdit; }
+    sending = true;
+    btn.disabled = true;
+    btn.textContent = "Надсилаємо…";
+    fetch(API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j || !j.ok) {
+          var msg = (j && j.error) || "Не вдалося надіслати замовлення. Спробуйте ще раз.";
+          if (j && j.stock) return loadCatalog(true).then(function () { showErrors([msg]); });
+          showErrors([msg]);
+          return;
+        }
+        if (validCode(j.code)) state.code = j.code;
+        editN = 0;
+        $("done-num").textContent = "№ " + j.num;
+        $("done-text").textContent = (wasEdit ? "Зміни збережено. " : "Замовлення записано. ") + (j.notice || serverNotice || "Менеджер зв'яжеться з вами для підтвердження.");
+        $("done-lines").innerHTML = it.map(function (x) { return lineHtml(x, false); }).join("");
+        $("done-sum").textContent = summary(t) + " — " + money(typeof j.sum === "number" ? j.sum : t.sum);
+        var dl = $("done-link");
+        if (j.link && j.isNew) {
+          dl.innerHTML = "Ваше особисте посилання для наступних замовлень — дані закладу підставлятимуться самі:<br><a href=\"" + esc(j.link) + "\">" + esc(j.link) + "</a>";
+          dl.hidden = false;
+        } else dl.hidden = true;
+        state.cart = {};
+        setField("comment", "");
+        loadCatalog(true);
+        mode = "done";
+        $("compose").hidden = true;
+        $("done").hidden = false;
+        $("order").classList.add("done-mode");
+        update();
+        $("order").scrollIntoView({ behavior: "smooth", block: "start" });
+      })
+      .catch(function () { showErrors(["Немає зв'язку з сервером. Перевірте інтернет і натисніть ще раз — кошик збережено."]); })
+      .then(function () {
+        sending = false;
+        btn.disabled = !OPEN;
+        renderMy();
+      });
+  });
+
+  $("again").addEventListener("click", function () {
+    editN = 0;
+    renderMy();
+    mode = "compose";
+    $("done").hidden = true;
+    $("compose").hidden = false;
+    $("order").classList.remove("done-mode");
+    showErrors([]);
+    update();
+    var top = document.querySelector(".layout");
+    if (top) top.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  $("clear").addEventListener("click", function () {
+    state.cart = {};
+    showErrors([]);
+    update();
+  });
+
+  var elOrder = $("order");
+  $("dock-go").addEventListener("click", function () { elOrder.scrollIntoView({ behavior: "smooth", block: "start" }); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      orderVisible = entries[0].isIntersecting;
+      refreshDock();
+    }, { threshold: 0.12 }).observe(elOrder);
+  }
+
+  update();
+})();
+</script>
+</body>
+</html>
