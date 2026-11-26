@@ -284,14 +284,14 @@ a { color: inherit; }
 
 <main class="shell">
   <p class="loading" id="loading">Завантажуємо…</p>
-  <noscript><p class="loading" style="display:block">Сторінка працює, коли її відкрито в браузері з увімкненим JavaScript (Chrome чи Safari). Або зателефонуйте менеджеру: +380 93 056 82 63.</p></noscript>
+  <noscript><p class="loading" style="display:block">Сторінка працює, коли її відкрито в браузері з увімкненим JavaScript (Chrome чи Safari). Або зателефонуйте менеджеру: +380 63 836 53 82.</p></noscript>
 
   <section class="lead" id="lead" hidden aria-labelledby="lead-h">
     <div class="lead-text">
       <h2 id="lead-h">Стати партнером</h2>
       <p class="lead-warn" id="lead-warn" hidden>Це посилання не спрацювало. Залиште заявку або зателефонуйте — менеджер надішле правильне.</p>
       <p>Працюємо з барами, пабами й магазинами по всій Україні. Залиште контакти — менеджер звʼяжеться з вами, розповість про асортимент і умови та надішле особисте посилання для замовлень.</p>
-      <p class="lead-call">Або зателефонуйте: <a href="tel:+380930568263">+380 93 056 82 63</a><br><span>Пн–Пт 9:00–18:00, Сб 9:00–15:00</span></p>
+      <p class="lead-call">Або зателефонуйте: <a href="tel:+380638365382">+380 63 836 53 82</a><br>чи напишіть у <a href="https://t.me/diysno_brewery" target="_blank" rel="noopener">Telegram @diysno_brewery</a><br><span>Пн–Пт 9:00–18:00, Сб 9:00–15:00</span></p>
       <p><a class="back" href="../">← Про броварню і наше пиво</a></p>
     </div>
     <div class="order lead-box">
@@ -426,7 +426,8 @@ a { color: inherit; }
     <div class="foot-grid">
       <div>
         <h4>Менеджер по закладах</h4>
-        <p class="big"><a href="tel:+380930568263">+380 93 056 82 63</a></p>
+        <p class="big"><a href="tel:+380638365382">+380 63 836 53 82</a></p>
+        <p><a href="https://t.me/diysno_brewery" target="_blank" rel="noopener">Telegram @diysno_brewery ↗</a></p>
         <p id="mgr-hint">Пн–Пт 9:00–18:00, Сб 9:00–15:00</p>
       </div>
       <div>
@@ -913,7 +914,7 @@ a { color: inherit; }
       .then(function (r) { return r.json(); })
       .then(function (j) { if (j && j.ok) applyCatalog(j); else throw new Error("bad"); })
       .catch(function () {
-        if (VIEW === "loading") $("loading").textContent = "Не вдалося завантажити сторінку. Перезавантажте її за хвилину або зателефонуйте менеджеру: +380 93 056 82 63.";
+        if (VIEW === "loading") $("loading").textContent = "Не вдалося завантажити сторінку. Перезавантажте її за хвилину або зателефонуйте менеджеру: +380 63 836 53 82.";
         else if (!quiet) showNotice("Не вдалося оновити прайс із сервера. Перезавантажте сторінку, перш ніж замовляти.", true);
       });
   }
