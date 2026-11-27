@@ -276,7 +276,7 @@ a { color: inherit; }
     </div>
     <div class="band-meta">
       <p class="band-title" id="band-title">Замовлення для закладів</p>
-      <p class="band-sub" id="upd">Кеги 30 л і пляшки · доставка по Україні</p>
+      <p class="band-sub" id="upd">Кеги 30 л · доставка по Україні</p>
     </div>
   </div>
 </header>
@@ -331,7 +331,7 @@ a { color: inherit; }
 
   <div id="shop" hidden>
   <ol class="steps" aria-label="Як замовити">
-    <li><b>1</b>Оберіть пиво: кеги по 30 л або пляшки</li>
+    <li><b>1</b>Оберіть пиво в кегах по 30 л</li>
     <li><b>2</b>Вкажіть дані закладу — наступного разу підставляться самі</li>
     <li><b>3</b>Надішліть — замовлення одразу потрапляє до менеджера броварні</li>
   </ol>
@@ -616,8 +616,7 @@ a { color: inherit; }
   var list = $("beers");
   function renderList() {
     list.innerHTML =
-      groupHtml("Кеги · " + KEG + " л", "грн/л", BEERS.filter(function (b) { return b.unit !== "bottle"; })) +
-      groupHtml("Пляшки · " + nf2.format(BOTTLE) + " л", "грн/пляшка", BEERS.filter(function (b) { return b.unit === "bottle"; }));
+      groupHtml("Кеги · " + KEG + " л", "грн/л", BEERS);
   }
   renderList();
   list.addEventListener("click", function (e) {
@@ -875,7 +874,8 @@ a { color: inherit; }
     }
     if (VIEW !== "shop") showView("shop");
     if (Array.isArray(j.beers) && j.beers.length) {
-      BEERS = j.beers;
+      // пляшки не показуємо й не приймаємо: на пляшки немає ліцензії (27.11.2026)
+      BEERS = j.beers.filter(function (b) { return b.unit !== "bottle"; });
       if (j.kegL > 0) KEG = j.kegL;
       if (j.bottleL > 0) BOTTLE = j.bottleL;
       if (j.freeShip > 0) FREE = j.freeShip;
