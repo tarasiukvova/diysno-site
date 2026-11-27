@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Diysno Brewery — крафтова броварня з Рівного</title>
-<meta name="description" content="Diysno Brewery — крафтова броварня з Рівного. Лагер, пшеничне, IPA, стаути й томатне пиво. Кеги 30 л і пляшки для барів, пабів і магазинів по всій Україні.">
+<meta name="description" content="Diysno Brewery — крафтова броварня з Рівного. Лагер, пшеничне, IPA, стаути й томатне пиво. Кеги 30 л для барів, пабів і магазинів по всій Україні.">
 <link rel="canonical" href="https://diysno.com.ua/">
 <meta name="theme-color" content="#142a22">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:site_name" content="Diysno Brewery">
 <meta property="og:title" content="Diysno Brewery — крафтова броварня з Рівного">
-<meta property="og:description" content="Крафтове пиво в кегах і пляшках для барів, пабів і магазинів по всій Україні.">
+<meta property="og:description" content="Крафтове пиво в кегах для барів, пабів і магазинів по всій Україні.">
 <meta property="og:url" content="https://diysno.com.ua/">
 <meta property="og:image" content="https://diysno.com.ua/img/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -192,7 +192,7 @@ a { color: inherit; }
       <div class="sec-head">
         <p class="kicker">Зараз варимо</p>
         <h2 class="sec-title" id="pyvo-h">Наше пиво</h2>
-        <p class="sec-lead">Пиво, яке є зараз: у кегах по 30 л і в пляшках 0,33 л.</p>
+        <p class="sec-lead">Пиво, яке є зараз, у кегах по 30 л.</p>
       </div>
       <div class="beers" id="beers"></div>
       <a class="all-ut" href="https://untappd.com/DiysnoBrewery" target="_blank" rel="noopener">Усі наші пива на Untappd ↗</a>
@@ -209,8 +209,8 @@ a { color: inherit; }
       <ul class="points">
         <li class="point">
           <svg viewBox="0 0 34 34" aria-hidden="true"><rect x="8" y="4" width="18" height="26" rx="4"/><path d="M8 11h18M8 23h18M14 4V2h6v2"/></svg>
-          <h3>Кеги й пляшки</h3>
-          <p>Кеги по 30 л і пляшкове пиво 0,33 л.</p>
+          <h3>Кеги 30 л</h3>
+          <p>Пластикові безповоротні кеги по 30 л.</p>
         </li>
         <li class="point">
           <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 9h18v15H3zM21 14h6l4 5v5H21z"/><circle cx="9" cy="26" r="3"/><circle cx="26" cy="26" r="3"/></svg>
@@ -301,11 +301,7 @@ a { color: inherit; }
       "ut": { "url": "https://untappd.com/b/diysno-brewery-pepperazzi-tomato/7179194", "rating": 3.89, "ratings": 37 } },
     { "id": "lights-out", "unit": "keg", "name": "Lights Out", "isNew": true, "style": "Dry Stout", "abv": 5.5, "ibu": 25,
       "description": "Темний стаут із виразним характером обсмаженого солоду. В ароматі — кава, какао та підсмажена хлібна скоринка. У смаку кавові й шоколадні ноти поєднуються з легкими карамельними відтінками та стриманою хмелевою гіркотою. Сухий, злегка обсмажений післясмак.",
-      "ut": { "url": "https://untappd.com/b/diysno-brewery-lights-out/7651469", "rating": null, "ratings": 3 } },
-    { "id": "cinnamon-eyes", "unit": "bottle", "name": "Cinnamon Eyes", "isNew": false, "style": "Imperial Stout · бочка з-під віскі",
-      "description": "Imperial Stout, витриманий у бочці з-під віскі з додаванням кориці та настоянки Mamajuana. Глибоке, солодкувате, спокусливе — як очі, у які хочеться дивитись." },
-    { "id": "drunk-by-design", "unit": "bottle", "name": "Drunk by Design", "isNew": false, "style": "Imperial Stout · бочка з-під бурбону",
-      "description": "Темний, густий, зігріваючий імперський стаут, витриманий у бочці з-під бурбону. Глибокий аромат кави, ванілі, чорного шоколаду та дуба. Насичене тіло, благородний післясмак, зрілий характер." }
+      "ut": { "url": "https://untappd.com/b/diysno-brewery-lights-out/7651469", "rating": null, "ratings": 3 } }
   ]
 }
 </script>
@@ -359,9 +355,9 @@ a { color: inherit; }
       "</article>";
   }
   function render(beers) {
+    // пляшки не показуємо: на пляшки немає ліцензії (27.11.2026)
     var kegs = beers.filter(function (b) { return b.unit !== "bottle"; });
-    var bottles = beers.filter(function (b) { return b.unit === "bottle"; });
-    list.innerHTML = kegs.concat(bottles).map(card).join("");
+    list.innerHTML = kegs.map(card).join("");
   }
   function clean(b) {
     return { id: String(b.id || ""), unit: b.unit === "bottle" ? "bottle" : "keg", name: String(b.name || ""), isNew: !!b.isNew,
